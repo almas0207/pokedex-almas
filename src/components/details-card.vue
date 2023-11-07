@@ -50,7 +50,7 @@ const detailsPages = ref([
 
 <template>
   <div class="mt-3 text-white flex flex-col justify-between">
-    <div class="px-4 flex flex-col h-[30vh]">
+    <div class="px-4 flex flex-col">
       <div class="flex flex-row justify-between items-center">
         <div class="text-2xl font-semibold">
           {{
@@ -78,12 +78,12 @@ const detailsPages = ref([
         <img
           :src="selectedPokemon?.sprites.front_default"
           :alt="selectedPokemon?.name"
-          class="h-[150px] w-auto pokemon"
+          class="h-[200px] w-auto pokemon"
         />
       </div>
     </div>
     <div
-      class="bg-white p-4 h-[65vh] text-gray-500"
+      class="bg-white p-4 min-h-[60vh] text-gray-500"
       style="border-top-right-radius: 30px; border-top-left-radius: 30px"
     >
       <div class="my-5 flex flex-row justify-between">
