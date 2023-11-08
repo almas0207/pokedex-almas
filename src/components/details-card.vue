@@ -6,6 +6,7 @@ import aboutPage from '@/components/details-page/about-page.vue'
 import statsPage from '@/components/details-page/stats-page.vue'
 import evolutionPage from '@/components/details-page/evolution-page.vue'
 import movesPage from '@/components/details-page/moves-page.vue'
+import correctImagePath from '@/utilities/correct-image-path'
 
 const pokemonStore = usePokemonStore()
 const { selectedPokemon } = storeToRefs(pokemonStore)
@@ -76,7 +77,7 @@ const detailsPages = ref([
       </div>
       <div class="flex flex-row justify-center items-center">
         <img
-          :src="selectedPokemon?.sprites.front_default"
+          :src="correctImagePath(selectedPokemon?.sprites.front_default || '')"
           :alt="selectedPokemon?.name"
           class="h-[200px] w-auto pokemon"
         />
